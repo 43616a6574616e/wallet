@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Wallet</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap"
+			rel="stylesheet" />
+		<link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+		<div class="main">
+			<div class="new-transaction">
+				<div class="box">
+					<h2>dodaj nową transkację</h2>
+					<div class="mini-box">
+						<h3>Nazwa:</h3>
+						<p>(podaj nazwę transakcji)</p>
+						<input type="text" class="transaction-name" />
+					</div>
+
+					<div class="mini-box">
+						<h3>Kwota:</h3>
+						<p>
+							(podaj kwotę transakcji, jeśli dodajesz wydatek, postaw znak
+							minusa na początku kwoty)
+						</p>
+						<input type="number" class="transaction-sum" />
+					</div>
+
+					<div class="mini-box">
+						<h3>Wybierz kategorię:</h3>
+						<p>([+] oznacza przychód, [-] oznacza wydatek)</p>
+						<select class="category">
+							<option value="0" disabled selected>- wybierz kategorię -</option>
+							<option value="1">[+] Przychód</option>
+							<option value="2">[-] Zakupy</option>
+							<option value="3">[-] Jedzenie</option>
+							<option value="4">[-] Kino</option>
+						</select>
+					</div>
+
+					<div class="buttons">
+						<button class="save"><i class="lni lni-save"></i> Zapisz</button>
+						<button class="cancel" >
+							<i class="lni lni-cross-circle" ></i> Anuluj
+						</button>
+					</div>
+					<p class="error">Uzupełnij wszystkie pola!</p>
+				</div>
+			</div>
+
+			<div class="header">
+				<h1><i class="lni lni-wallet"></i> Wallet</h1>
+				<p>Twój osobisty menedżer finansów</p>
+			</div>
+			<div class="container">
+				<div class="transaction-list">
+					<h2>lista transakcji</h2>
+                    <div class="spendsAll">
+                        <div class="spends">
+                            <div class="income">
+                                <p>Przychód:</p>
+                            </div>
+                        </div>
+                        <div class="spends2">
+                            <div class="expenses">
+                                <p>Wydatki:</p>
+                            </div>
+                        </div>
+                    </div>
+					
+				</div>
+				
+				<div class="available-funds">
+					<div class="funds-box">
+						<p>dostępne środki:</p>
+						<p class="active-funds">0zł</p>
+						<div class="btns">
+							<button class="add-transaction workButtons">
+								<i class="lni lni-plus"></i> Dodaj transkację
+							</button>
+							<button class="delete-everything workButtons">
+								<i class="lni lni-trash-can"></i> Usuń wszystko
+							</button>
+						</div>
+						<p>wybierz styl:</p>
+						<div class="circles">
+							<div class="circle light"></div>
+							<div class="circle dark"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="app.js"></script>
+	</body>
+</html>
